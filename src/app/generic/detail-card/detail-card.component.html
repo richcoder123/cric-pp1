@@ -4,38 +4,26 @@
             width="300"
             height="300"
             src="https://cric-pp1-player-images.s3.ap-south-1.amazonaws.com/aman.jpeg" alt="An image of Aman Gupta">
-
-            <div class="connect">
-                Mobile - +91 - 928 4700 510
-            </div>
-            <div class="connect">
-                E-mail - amangupta.ua@gmail.com
-            </div>
-            <div class="connect">
-                Hometown - Rampur (U.P.)
-            </div>
-            <div class="connect">
-                Preferred Location - Open to any
-            </div>
+            <ng-container *ngFor="let details of connectDetails">
+                <div class="connect">
+                    {{ details}}
+                </div>
+            </ng-container>
     </div>
     <div class="pad-l">
-
         <div>
             {{ headline }}
         </div>
-
         <div class="chip-container">
             <ng-container *ngFor="let chip of chipSet">
-                <div class="chip-style" (click)="activateChipContent(chip)">{{ chip.name }}</div>
+                <div class="chip-style" [ngClass]="chip.style" (click)="activateChipContent(chip)">{{ chip.name }}</div>
             </ng-container>
         </div>
-
         <div *ngFor="let chip of chipSet; let i = index">
             <div *ngIf="chip.activate === true">
                 <ng-template *ngTemplateOutlet="expTemplate; context: {experience: chip.experience}"></ng-template>
             </div>
         </div>
-
         <ng-template #expTemplate let-expArr="experience">
             <div *ngFor="let exp of expArr">
                 <div class="content-chip-container">
@@ -45,6 +33,5 @@
                 </div>
             </div>
         </ng-template>
-
     </div>
 </div>

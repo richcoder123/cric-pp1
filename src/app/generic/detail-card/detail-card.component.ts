@@ -66,33 +66,42 @@ export class DetailCardComponent {
 
   chipSet = [{
     name: 'Primary skills',
-    activate: false,
-    experience: this.primarySkills
+    activate: true,
+    experience: this.primarySkills,
+    style: 'selected-style'
   }, {
     name: 'Experience @Ciena (1.3 years)',
     activate: false,
-    experience: this.cienaExp
+    experience: this.cienaExp,
+    style: 'not-selected-style'
   }, {
     name: 'Experience @CSG (4 years)',
     activate: false,
-    experience: this.csgExp
+    experience: this.csgExp,
+    style: 'not-selected-style'
   }, {
     name: 'Experience @3DS (2.4 years)',
     activate: false,
-    experience: this.dsExp
+    experience: this.dsExp,
+    style: 'not-selected-style'
   }, {
     name: 'Education',
     activate: false,
-    experience: this.education
+    experience: this.education,
+    style: 'not-selected-style'
   }]
+
+  connectDetails = ['Mobile - +91 - 928 4700 510', 'E-mail - amangupta.ua@gmail.com', 'Hometown - Rampur (U.P.)', 'Preferred Location - Open to any']
 
   wishlist = 'React, Java - spring boot, Database - Postgres, AWS'
 
   activateChipContent(activatedChip: any) {
     this.chipSet.forEach(chip => {
       chip.activate = false
+      chip.style = 'not-selected-style'
       if (chip.name === activatedChip.name) {
         chip.activate = true
+        chip.style = 'selected-style'
       }
     })
   }

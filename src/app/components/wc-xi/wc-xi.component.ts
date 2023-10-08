@@ -9,15 +9,36 @@ import { PlayerdetailsService } from 'src/app/services/playerdetails.service';
 })
 export class WcXiComponent {
 
-  dataSet: any
+  dataSet: any;
+  dataSetOrg: any;
+  chipList = ['batsman', 'all-rounder', 'bowler']
+  isFilteredDataSet = false
 
   constructor(private playerDetails: PlayerdetailsService) {
 
   }
 
   ngOnInit() {
-    this.playerDetails.getIndiaWcTeam().subscribe((data: any) => {
-      this.dataSet = JSON.parse(data.body)
-    })
+    if (!this.dataSet) {
+      this.playerDetails.getIndiaWcTeam().subscribe((data: any) => {
+        this.dataSet = JSON.parse(data.body)
+        this.dataSetOrg = JSON.parse(data.body)
+      })
+    }
   }
+
+  onChipClicked($event: any) {
+    if (this.isFilteredDataSet === true) {
+      this.dataSet = JSON.parse(JSON.stringify(this.dataSetOrg))
+    }
+    console.log('filter dataset', $event)
+    this.dataSet = this.dataSet.filter((item: any) => {
+        if ((item.type) === $event?.srcElement?.innerHTML) {
+          return item
+        }
+    })
+    this.isFilteredDataSet = true
+    console.log(this.dataSet)
+  }
+
 }

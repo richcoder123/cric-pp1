@@ -11,6 +11,10 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { CardComponent } from './components/common/card/card.component';
 import { PlayerdetailsService } from './services/playerdetails.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterChipComponent } from './components/common/filter-chip/filter-chip.component';
+import { PlayerStatisticsPipe } from './custom-pipes/player-statistics.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,12 +24,17 @@ import { HttpClientModule } from '@angular/common/http';
     AllTimeIndiaXiComponent,
     HomeComponent,
     AboutMeComponent,
-    CardComponent
+    CardComponent,
+    FilterChipComponent,
+    PlayerStatisticsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [PlayerdetailsService],
   bootstrap: [AppComponent]

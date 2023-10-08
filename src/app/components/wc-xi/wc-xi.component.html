@@ -1,4 +1,6 @@
-
+<div class="pad-m">
+    <app-filter-chip [chipList]="chipList" (onChipClicked)="onChipClicked($event)"></app-filter-chip>
+</div>
 <div class="container">
     <div *ngFor="let player of dataSet">
         <app-card [cardData]="player"></app-card>

@@ -7,8 +7,7 @@
     <div class="right-section">
         <div class="player-name pad-l">{{ cardData?.name }}</div>
 
-        <span class="pad-l">Average : {{ cardData?.average }}</span>
-        <span class="pad-m">Strike Rate : {{ cardData?.strikeRate }}</span>
+        <span class="pad-m">{{ '' | playerStatistics: cardData?.average : cardData?.strikeRate }}</span>
         <div class="pad-m">{{ cardData.description }}</div>
     </div>
 </div>

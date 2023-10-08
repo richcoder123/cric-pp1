@@ -10,8 +10,6 @@ export class FilterChipComponent {
   @Input() chipList: string[] = []
   @Output() onChipClicked = new EventEmitter()
 
-  val = 'Batsman'
-
   onChipClickedEvent($event: any) {
     this.onChipClicked.emit($event)
   }

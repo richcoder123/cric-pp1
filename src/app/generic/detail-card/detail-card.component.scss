@@ -1,0 +1,66 @@
+.container {
+    min-height: 800px;
+    border: 2px solid blue;
+    margin: 40px 300px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.image-style {
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.chip-style {
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.content-chip-container {
+    border: 1px solid green;
+    margin-left: 10px;
+    border-radius: 30px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.content-exp-container {
+    height: 500px;
+    width: 700px;
+    border: 1px solid green;
+    margin-left: 10px;
+    border-radius: 30px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.pad-m {
+    padding: 15px;
+}
+
+.pad-l {
+    padding: 40px;
+}
+
+.min-width {
+    min-width: 70px;
+}
+
+.connect {
+    width: 230px;
+    height: 8px;
+    border: 1px solid blue;
+    border-radius: 50px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 30px;
+}

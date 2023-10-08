@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AboutMeRoutingModule } from './about-me-routing.module';
 import { AuthorComponent } from './author/author.component';
+import { GenericModule } from '../generic/generic.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AuthorComponent } from './author/author.component';
   ],
   imports: [
     CommonModule,
-    AboutMeRoutingModule
+    AboutMeRoutingModule,
+    GenericModule
   ]
 })
 export class AboutMeModule { }

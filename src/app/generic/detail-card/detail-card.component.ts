@@ -44,15 +44,16 @@ export class DetailCardComponent {
 
   primarySkills = [
     'Angular - Started working on Angular in 2016 with AngularJS 1.6, then have worked on Angular V2, V4, V10 and V14.',
-    'Typescript - Angular is written in Typescript - Typed JavaScript.',
-    'JavaScript - have worked on javascript',
-    'HTML - mainly HTML 5',
+    'Typescript - Angular is implemented using Typescript - Typed JavaScript.',
+    'JavaScript - have extensively worked on JavaScript.',
+    'HTML - Creating templates using HTML5',
     'CSS - Writing styles myself, have not used any third party frameworks, have used CSS and SCSS.',
-    'Jasmine, Jest - Unit testing framework based on JavaScript.',
     'RxJS - writing reactive code.',
-    'Sanity - Writing clean code, doing code reviews and writing generic code.',
+    'Jasmine, Jest - have substantially used these unit testing frameworks, based on JavaScript.',
+    'Protractor, Cypress - have substantially used these E2E testing frameworks, based on JavaScript.',
+    'Sanity - Writing clean, reusable and generic code, doing code reviews.',
     'Lead - Assist fellow developers, lead team and deliver in agreed timeframes.',
-    'Wishlist - Wish to learn and work on Java, spring boot, React, database and AWS.'
+    'Wishlist - Wish to learn and work on Java, spring boot, NodeJS, React, database and AWS.'
   ]
 
   education = [

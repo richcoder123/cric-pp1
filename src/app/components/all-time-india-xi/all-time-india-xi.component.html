@@ -1,13 +1,21 @@
-
-<br>
-<br>
-<button (click)="activateTeamBuilding()">Create your own team</button>
-
-<div *ngIf="isActivateTeamBuilding === true">
-
-    <br>
-    <br>
-    coming soon...
-
-
-</div>
+<table class="bordered">
+    <thead>
+        <tr>
+            <th *ngFor="let header of playerTableHeaders">
+                <span>
+                    {{ header | titlecase }}
+                </span>
+                <span class="pad-m">
+                    <input type="text" (keyup)="filterData($event, header)" placeholder="Filter by {{ header }}">
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rowData of _playerDetails">
+            <td *ngFor="let column of playerTableHeaders; let i = index">
+                {{ getData(rowData, column) | titlecase }}
+            </td>
+        </tr>
+    </tbody>
+</table>

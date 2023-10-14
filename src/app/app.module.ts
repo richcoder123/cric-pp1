@@ -27,10 +27,10 @@ import { CommonModule } from '@angular/common';
     PlayerStatisticsPipe
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     ReactiveFormsModule,
     CommonModule
   ],
